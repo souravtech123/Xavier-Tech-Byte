@@ -13,14 +13,13 @@ const Hero = () => {
             </span>
   
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-              Building Future <br />
-              <span className="text-indigo-500">Tech Leaders</span>
+            Building Skills <br />
+              <span className="text-indigo-500">That Matter</span>
             </h1>
   
             <p className="mt-6 text-gray-400 text-lg max-w-xl">
-              Xavier Tech Byte Society is a student-driven tech community focused on
-              learning, building real-world projects, hackathons, and growing
-              together in tech.
+            Xavier Tech Byte Society is a student-driven tech community where curious minds come together to learn, innovate, and build. We focus on hands-on learning through real-world projects, hackathons, workshops, and collaborative tech initiatives, helping students grow their skills and confidence.
+            Our mission is simple: learn together, build together, and grow together in tech.
             </p>
   
             {/* CTA Buttons */}

@@ -9,6 +9,7 @@ import Team from '../Components/Home/Team'
 import Gallery from '../Components/Home/Gallary'
 import FinalCTA from '../Components/Home/Final'
 import Footer from '../Components/Home/Footer'
+import Founders from '../Components/Home/Founders'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
     <WhatWeDo/>
     <Events/>
     <Opportunities/>
+    <Founders/>
     <Team/>
     <Gallery/>
     <FinalCTA/>
