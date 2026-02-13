@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { NavLink } from "react-router";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -57,9 +58,9 @@ export default function Navbar() {
             <a href="#team" onClick={() => setOpen(false)}>Team</a>
             <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
 
-            <button className="mt-2 px-4 py-2 rounded-lg bg-blue-600 text-white">
+            <NavLink to='/join' className="mt-2 px-4 py-2 rounded-lg bg-blue-600 text-white">
               Join Us
-            </button>
+            </NavLink>
           </div>
         </div>
       )}

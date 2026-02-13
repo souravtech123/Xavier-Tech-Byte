@@ -18,40 +18,49 @@ const galleryImages = [
 
 const Gallery = () => {
   return (
-    <section className="bg-gray-950 text-white py-16 px-6">
-      <div className="max-w-7xl mx-auto">
-
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-green-400">Our Gallery</h2>
-          <p className="text-gray-400 mt-3 max-w-xl mx-auto">
-            Moments from hackathons, workshops, meetups, and product-building journeys
-            at Xavier Tech Byte Society.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {galleryImages.map((item) => (
-            <div
-              key={item.id}
-              className="group relative overflow-hidden rounded-xl shadow-lg"
-            >
-              <img
-                src={item.src}
-                alt={item.title}
-                className="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
-              />
-
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                <h3 className="text-lg font-semibold text-white">
-                  {item.title}
-                </h3>
-              </div>
-            </div>
-          ))}
-        </div>
-
+    <section className="bg-white py-24 px-6">
+    <div className="max-w-7xl mx-auto">
+  
+      {/* Section Header */}
+      <div className="text-center mb-16">
+        <span className="text-sm font-semibold text-indigo-600 uppercase tracking-wide">
+          Gallery
+        </span>
+        <h2 className="mt-3 text-4xl font-extrabold text-gray-900">
+          Our Gallery
+        </h2>
+        <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-lg">
+          Moments from hackathons, workshops, meetups, and product-building journeys
+          at Xavier Tech Byte Society.
+        </p>
       </div>
-    </section>
+  
+      {/* Gallery Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {galleryImages.map((item) => (
+          <div
+            key={item.id}
+            className="group relative overflow-hidden rounded-2xl border border-gray-200 hover:shadow-xl transition"
+          >
+            <img
+              src={item.src}
+              alt={item.title}
+              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+  
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-white/70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center backdrop-blur-sm">
+              <h3 className="text-lg font-semibold text-gray-900">
+                {item.title}
+              </h3>
+            </div>
+          </div>
+        ))}
+      </div>
+  
+    </div>
+  </section>
+  
   );
 };
 

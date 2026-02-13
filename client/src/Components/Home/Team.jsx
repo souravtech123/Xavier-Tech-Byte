@@ -54,51 +54,56 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <section className="bg-gray-900 text-white py-16 px-6">
-      <div className="max-w-7xl mx-auto">
-        
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-green-400">
-            Meet Our Team
-          </h2>
-          <p className="text-gray-400 mt-3 max-w-xl mx-auto">
-            The minds behind Xavier Tech Byte Society — builders, designers,
-            innovators, and leaders shaping real-world products.
-          </p>
-        </div>
-
-        {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {teamMembers.map((member) => (
-            <div
-              key={member.id}
-              className="group bg-gray-950 rounded-2xl overflow-hidden shadow-lg hover:shadow-green-500/20 transition"
-            >
-              {/* Image */}
-              <div className="overflow-hidden">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-72 object-cover transform group-hover:scale-105 transition duration-500"
-                />
-              </div>
-
-              {/* Content */}
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold">
-                  {member.name}
-                </h3>
-                <p className="text-green-400 mt-1">
-                  {member.role}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+    <section className="bg-gray-50 py-24 px-6">
+    <div className="max-w-7xl mx-auto">
+  
+      {/* Section Header */}
+      <div className="text-center mb-16">
+        <span className="text-sm font-semibold text-indigo-600 tracking-wide uppercase">
+          Our Team
+        </span>
+        <h2 className="mt-3 text-4xl font-extrabold text-gray-900">
+          Meet the People Behind XTS
+        </h2>
+        <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-lg">
+          The minds behind Xavier Tech Byte Society — builders, designers,
+          innovators, and leaders shaping real-world products.
+        </p>
       </div>
-    </section>
-  );
+  
+      {/* Team Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+        {teamMembers.map((member) => (
+          <div
+            key={member.id}
+            className="group bg-white rounded-2xl overflow-hidden border border-gray-200 transition hover:shadow-2xl"
+          >
+            {/* Image */}
+            <div className="relative overflow-hidden">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+  
+            {/* Content */}
+            <div className="p-6 text-center">
+              <h3 className="text-xl font-semibold text-gray-900">
+                {member.name}
+              </h3>
+              <p className="text-indigo-600 mt-1 font-medium">
+                {member.role}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+  
+    </div>
+  </section>
+  
+  )
 };
 
 export default Team;

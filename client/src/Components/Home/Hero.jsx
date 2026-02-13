@@ -1,4 +1,9 @@
+import { NavLink } from "react-router";
+
 export default function Hero() {
+   
+  
+
     return (
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-100">
         
@@ -28,12 +33,12 @@ export default function Hero() {
   
           {/* CTA Buttons */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#join"
+            <NavLink 
+               to={'/join'}
               className="px-8 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
             >
               Join the Community
-            </a>
+            </NavLink>
   
             <a
               href="#projects"

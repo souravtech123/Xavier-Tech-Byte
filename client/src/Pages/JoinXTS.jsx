@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
-
 export default function JoinXTS() {
   const navigate = useNavigate();
 
@@ -43,80 +42,146 @@ export default function JoinXTS() {
   };
 
   return (
-    <>
-      <div className="min-h-screen flex items-center justify-center bg-gray-950 px-4">
-        <div className="w-full max-w-lg bg-white rounded-2xl shadow-xl p-8">
+    <section className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16">
 
-          <h1 className="text-2xl font-bold text-center mb-6">
-            Join XTS Community
+        {/* LEFT – Context */}
+        <div>
+          <span className="text-sm font-semibold text-indigo-600">
+            Xavier Tech Byte
+          </span>
+
+          <h1 className="mt-3 text-4xl font-extrabold text-gray-900 leading-tight">
+            Apply to Join <br /> the XTS Community
           </h1>
 
+          <p className="mt-6 text-lg text-gray-600">
+            XTS is a student-led tech ecosystem focused on building real skills,
+            real projects, and real impact. We’re looking for curious minds who
+            want to grow beyond classrooms.
+          </p>
+
+          <div className="mt-10 space-y-4">
+            <div className="flex items-start gap-3">
+              <span className="mt-1 w-2 h-2 bg-indigo-600 rounded-full"></span>
+              <p className="text-gray-700">
+                Work on real-world tech projects
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="mt-1 w-2 h-2 bg-indigo-600 rounded-full"></span>
+              <p className="text-gray-700">
+                Learn directly from mentors & peers
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="mt-1 w-2 h-2 bg-indigo-600 rounded-full"></span>
+              <p className="text-gray-700">
+                Build a strong tech portfolio
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-10 text-sm text-gray-400">
+            Applications are reviewed manually by the XTS core team.
+          </p>
+        </div>
+
+        {/* RIGHT – Application Form */}
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            Application Form
+          </h2>
+
           {error && (
-            <div className="mb-4 text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg p-2">
+            <div className="mb-6 text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg p-3">
               {error}
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-8">
 
-            <input
-              type="text"
-              name="name"
-              required
-              placeholder="Full Name"
-              onChange={handleChange}
-              className="input"
-            />
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Full Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                required
+                onChange={handleChange}
+                className="w-full border-b border-gray-300 bg-transparent py-2 text-gray-900 focus:outline-none focus:border-indigo-600"
+              />
+            </div>
 
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="Email Address"
-              onChange={handleChange}
-              className="input"
-            />
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Email Address
+              </label>
+              <input
+                type="email"
+                name="email"
+                required
+                onChange={handleChange}
+                className="w-full border-b border-gray-300 bg-transparent py-2 text-gray-900 focus:outline-none focus:border-indigo-600"
+              />
+            </div>
 
-            <input
-              type="tel"
-              name="phone"
-              required
-              placeholder="Phone Number"
-              onChange={handleChange}
-              className="input"
-            />
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                name="phone"
+                required
+                onChange={handleChange}
+                className="w-full border-b border-gray-300 bg-transparent py-2 text-gray-900 focus:outline-none focus:border-indigo-600"
+              />
+            </div>
 
-            <select
-              name="role"
-              required
-              onChange={handleChange}
-              className="input"
-            >
-              <option value="">Area of Interest</option>
-              <option>Web Development</option>
-              <option>Backend / APIs</option>
-              <option>AI / ML</option>
-              <option>UI / UX Design</option>
-              <option>Content / Community</option>
-            </select>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Area of Interest
+              </label>
+              <select
+                name="role"
+                required
+                onChange={handleChange}
+                className="w-full border-b border-gray-300 bg-transparent py-2 text-gray-900 focus:outline-none focus:border-indigo-600"
+              >
+                <option value="">Select one</option>
+                <option>Web Development</option>
+                <option>Backend / APIs</option>
+                <option>AI / ML</option>
+                <option>UI / UX Design</option>
+                <option>Content / Community</option>
+              </select>
+            </div>
 
-            <textarea
-              name="message"
-              rows="3"
-              placeholder="Why do you want to join XTS? (optional)"
-              onChange={handleChange}
-              className="input"
-            />
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Why do you want to join XTS? (Optional)
+              </label>
+              <textarea
+                name="message"
+                rows="4"
+                onChange={handleChange}
+                className="w-full border-b border-gray-300 bg-transparent py-2 text-gray-900 resize-none focus:outline-none focus:border-indigo-600"
+              />
+            </div>
 
             <button
               disabled={loading}
-              className="w-full bg-indigo-600 text-white py-2.5 rounded-lg font-semibold hover:bg-indigo-700 transition disabled:opacity-60"
+              className="w-full lg:w-auto px-10 py-3 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 transition disabled:opacity-60"
             >
-              {loading ? "Submitting..." : "Submit Application"}
+              {loading ? "Submitting Application..." : "Submit Application"}
             </button>
+
           </form>
         </div>
+
       </div>
-    </>
+    </section>
   );
 }
