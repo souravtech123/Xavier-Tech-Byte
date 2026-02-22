@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const steps = [
   {
     id: 1,
@@ -60,7 +61,7 @@ const JoinSociety = () => {
 
     {/* CTA */}
     <div className="text-center">
-      <a
+      <NavLink
         href="#"
         className="inline-flex items-center justify-center bg-indigo-600 text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition"
       >
