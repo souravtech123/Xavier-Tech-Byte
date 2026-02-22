@@ -1,5 +1,5 @@
 import React from "react";
-
+import { NavLink } from "react-router";
 
 const steps = [
   {
@@ -62,11 +62,11 @@ const JoinSociety = () => {
     {/* CTA */}
     <div className="text-center">
       <NavLink
-        href="#"
+        to={'/join'}
         className="inline-flex items-center justify-center bg-indigo-600 text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition"
       >
         Join the Society
-      </a>
+      </NavLink>
       <p className="text-gray-500 mt-4 text-sm">
         Open for all Xavier University students • No registration fee
       </p>
