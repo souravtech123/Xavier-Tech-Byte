@@ -23,7 +23,7 @@ export default function JoinXTS() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/xts/join", {
+      const res = await fetch("https://xavier-tech-byte.onrender.com/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
